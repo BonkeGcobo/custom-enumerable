@@ -1,4 +1,3 @@
-#!/usr/bin/ruby
 $LOAD_PATH << '.'
 require 'my_enumerable'
 
