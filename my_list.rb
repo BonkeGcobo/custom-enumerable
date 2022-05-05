@@ -1,5 +1,16 @@
+#!/usr/bin/ruby
+$LOAD_PATH << '.'
+require 'my_enumerable'
+
 class MyList
-  def intialize(_list)
-    @list=_list
+  include MyEnumerable
+  attr_accessor :list
+
+  def initialize(*list)
+    @list = list
+  end
+
+  def each(&block)
+    @list.each(&block)
   end
 end
