@@ -5,4 +5,11 @@ module MyEnumerable
     end
     true
   end
+
+  def any?(&block)
+    each do |element|
+      return true if block.call(element)
+    end
+    false
+  end
 end
