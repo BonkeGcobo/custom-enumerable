@@ -9,7 +9,9 @@ class MyList
     @list = list
   end
 
-  def each(&block)
-    @list.each(&block)
+  def each
+    @list.length.times do |i|
+      yield @list[i]
+    end
   end
 end
